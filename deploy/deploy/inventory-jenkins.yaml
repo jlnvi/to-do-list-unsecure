@@ -1,0 +1,14 @@
+my_infra:
+  hosts:
+    app-dev:
+      ansible_host: 192.168.56.10
+      app_ip: 192.168.56.10
+      app_env: dev
+    app-prod1:
+      ansible_host: 192.168.56.11
+      app_ip: 192.168.56.11
+      app_env: prod
+  vars:
+    ansible_user: admin
+    ansible_python_interpreter: /usr/bin/python3
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
