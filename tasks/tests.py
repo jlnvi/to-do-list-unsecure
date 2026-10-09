@@ -95,3 +95,7 @@ class TaskViewsTest(TestCase):
 
         self.assertEqual(Task.objects.count(), 0)
         self.assertRedirects(response, "/")
+        
+        class TestQuiCasse(TestCase):
+       def test_doit_echouer(self):
+           self.assertEqual(1, 2, "Test volontairement casse pour verifier que la chaine CI s'arrete")
